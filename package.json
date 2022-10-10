@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dnaRnaTest": "node 00-dnaRnaConversion/index.js",
-    "leapYearTest": "node 00-isLeapYear/index.js"
+    "leapYearTest": "node 00-isLeapYear/index.js",
+    "numToWordTest": "node 01-numToWord/index.js"
+
   },
   "repository": {
     "type": "git",
