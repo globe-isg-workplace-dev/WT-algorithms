@@ -60,3 +60,5 @@ function toRna(input) {
 
    return result;
 }
+
+console.log(toRna('ACGTGGTCTTAA') === 'UGCACCAGAAUU');
