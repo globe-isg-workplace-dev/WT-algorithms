@@ -2,7 +2,7 @@
 // `function isLeapYear(n: number): boolean`
 
 function isLeapYear(n) {
-    return n
+    return n % 4 == 0;
 }
 
 console.log(isLeapYear(1995))

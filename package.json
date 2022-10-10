@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dnaRnaTest": "node 00-dnaRnaConversion/index.js"
+    "dnaRnaTest": "node 00-dnaRnaConversion/index.js",
+    "leapYearTest": "node 00-isLeapYear/index.js"
   },
   "repository": {
     "type": "git",
