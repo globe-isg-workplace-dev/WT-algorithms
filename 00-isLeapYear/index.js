@@ -10,4 +10,4 @@ function isLeapYear(n) {
     return n % 4 == 0;
 }
 
-console.log(isLeapYear(1995))
+console.log(isLeapYear(1995));
