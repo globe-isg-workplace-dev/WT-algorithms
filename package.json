@@ -1,0 +1,20 @@
+{
+  "name": "wt-algorithms",
+  "version": "1.0.0",
+  "description": "This is a public repository of algorithm challenges done in the Workplace Technologies development team.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globe-isg-workplace-dev/WT-algorithms.git"
+  },
+  "author": "Xyza Rivera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/globe-isg-workplace-dev/WT-algorithms/issues"
+  },
+  "homepage": "https://github.com/globe-isg-workplace-dev/WT-algorithms#readme",
+  "type": "module"
+}
