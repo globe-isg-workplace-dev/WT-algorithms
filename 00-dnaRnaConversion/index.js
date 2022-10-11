@@ -41,9 +41,9 @@ toRna('ACGTGGTCTTAA') === 'UGCACCAGAAUU'
  * @returns Corresponding RNA Strand
  */
 function toRna(input) {
-   var result = "";
+   let result = "";
 
-   for (var i = 0; i < input.length; i++) {
+   for (let i = 0; i < input.length; i++) {
       switch(input[i]){
          case 'G': result += 'C';
             break;
@@ -54,7 +54,6 @@ function toRna(input) {
          case 'A': result += 'U';
             break;
          default : return "Error: Invalid Input"
-            // console.log('Error: Invalid Input');
       }
    }
 
