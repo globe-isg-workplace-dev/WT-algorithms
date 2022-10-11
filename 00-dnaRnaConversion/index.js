@@ -31,3 +31,33 @@ function toRna(input) {
 
 toRna('ACGTGGTCTTAA') === 'UGCACCAGAAUU'
  */
+
+
+/**
+ * This function converts the provided DNA Strand into its corresponding RNA Strand.
+ * If there is an invalid letter provided in the string, an error message will be 
+ * returned ot the user.
+ * @param {input} DNA Strand
+ * @returns Corresponding RNA Strand
+ */
+function toRna(input) {
+   let result = "";
+
+   for (let i = 0; i < input.length; i++) {
+      switch(input[i]){
+         case 'G': result += 'C';
+            break;
+         case 'C': result += 'G';
+            break;
+         case 'T': result += 'A';
+            break;
+         case 'A': result += 'U';
+            break;
+         default : return "Error: Invalid Input"
+      }
+   }
+
+   return result;
+}
+
+console.log(toRna('ACGTGGTCTTAA') === 'UGCACCAGAAUU');
