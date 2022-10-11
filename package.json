@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dnaRnaTest": "node 00-dnaRnaConversion/index.js",
     "leapYearTest": "node 00-isLeapYear/index.js",
-    "numToWordTest": "node 01-numToWord/index.js"
-
+    "numToWordTest": "node 01-numToWord/index.js",
+    "pokedexTest": "node 02-pokeDex/index.js"
   },
   "repository": {
     "type": "git",
