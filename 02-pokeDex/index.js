@@ -9,9 +9,9 @@ function Weakness(weakness) {
  * Find Attack Details Based on Attack Name
  */
 function findAttack(attack){
-    let found = false;
-    let i = 0; // increment for pokemon list
-    let j = 0; // increment for move list
+    var found = false;
+    var i = 0; // increment for pokemon list
+    var j = 0; // increment for move list
 
     while(!found && i < data.length){
         // check if pokemon has the move
@@ -50,7 +50,7 @@ function findNames() {
  * attack
  */
 function findByResistance(attack) {
-    let attackDetails = findAttack(attack);
+    var attackDetails = findAttack(attack);
     return data.filter(data => data.Resistant.includes(attackDetails.Type));
 }
 
@@ -59,8 +59,8 @@ function findByResistance(attack) {
  * attack
  */
 function findNamesByResistance(attack) {
-    let attackDetails = findAttack(attack);
-    let withResistance = data.filter(data => data.Resistant.includes(attackDetails.Type));
+    var attackDetails = findAttack(attack);
+    var withResistance = data.filter(data => data.Resistant.includes(attackDetails.Type));
     return withResistance.map(withResistance => withResistance.Name);
 }
 
@@ -69,7 +69,7 @@ function findNamesByResistance(attack) {
  */
 function avgMaxCP(){
     let withCP = data.filter(data => data.MaxCP != null);
-    let avgCP = withCP.reduce((result, withCP) => {
+    var avgCP = withCP.reduce((result, withCP) => {
         return result += withCP.MaxCP},0)/withCP.length;
     return avgCP;
 }
@@ -80,11 +80,11 @@ function avgMaxCP(){
  * in the dataset
  */
 function countedWeaknesses() {
-    let weaknesses = new Array();
-    let weaknessList = new Array();
+    var weaknesses = new Array();
+    var weaknessList = new Array();
 
     data.map(data => {
-        for(let i = 0; i < data.Weaknesses.length; i++) {
+        for(var i = 0; i < data.Weaknesses.length; i++) {
             if(weaknessList.length === 0) {
                 weaknesses.push(new Weakness(data.Weaknesses[i]));
                 weaknessList.push(data.Weaknesses[i]);

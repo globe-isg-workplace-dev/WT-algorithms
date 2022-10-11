@@ -7,10 +7,7 @@
  * @returns A boolean value that refers to whether the year is a leapyear
  */
 function isLeapYear(n) {
-    return n % 4 == 0 && (n % 100 != 0 || n % 400 == 0);
+    return n % 4 == 0;
 }
 
-console.log(isLeapYear(1900));
 console.log(isLeapYear(1995));
-console.log(isLeapYear(2000));
-console.log(isLeapYear(2004));
