@@ -36,24 +36,37 @@ function findAttack(attack){
 }
 
 
-
-
 // main functions
+
+/**
+ * Returns array of all pokemon names
+ */
 function findNames() {
     return data.map(data => data.Name);
 }
 
+/**
+ * Returns an array of pokemon objects that are resistant to the specified
+ * attack
+ */
 function findByResistance(attack) {
     var attackDetails = findAttack(attack);
     return data.filter(data => data.Resistant.includes(attackDetails.Type));
 }
 
+/**
+ * Returns an array pokemon names that are resistant to the specified
+ * attack
+ */
 function findNamesByResistance(attack) {
     var attackDetails = findAttack(attack);
     var withResistance = data.filter(data => data.Resistant.includes(attackDetails.Type));
     return withResistance.map(withResistance => withResistance.Name);
 }
 
+/**
+ * Returns the average max CP of all pokemon
+ */
 function avgMaxCP(){
     let withCP = data.filter(data => data.MaxCP != null);
     var avgCP = withCP.reduce((result, withCP) => {
@@ -61,8 +74,12 @@ function avgMaxCP(){
     return avgCP;
 }
 
+/**
+ * Returns an array of objects that contains the list
+ * of weaknesses and the number of times they occur 
+ * in the dataset
+ */
 function countedWeaknesses() {
-
     var weaknesses = new Array();
     var weaknessList = new Array();
 
@@ -79,7 +96,6 @@ function countedWeaknesses() {
             else
                 weaknesses[weaknessList.indexOf(data.Weaknesses[i])].count += 1;
         }
-        return weaknessList;
     });
 
     return weaknesses;
